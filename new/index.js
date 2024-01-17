@@ -1,3 +1,4 @@
+const { log } = require('console');
 const express = require('express')
 const app = express();
 const path = require('path');
@@ -7,6 +8,11 @@ const path = require('path');
 app.get('/search',(req,res)=>{
     console.log(req);
     res.send(`product = ${req.query.product} && ${req.query.color}`)
+})
+
+app.get('/student/:section/:rollno([0-9]{2})',(req,res)=>{
+    console.log(req);
+    res.send(`section = ${req.params.section} rollno:${req.params.rollno}`)
 })
 
 // app.get('/',(req,res)=>{
