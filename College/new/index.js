@@ -27,6 +27,9 @@ app.get('/student/:section/:rollno([0-9]{2})',(req,res)=>{
 //     res.send("Ram")
 // })
 
+
+
+
 app.listen (2500,()=>{
     console.log(`server is running at port 2500`);
 })
